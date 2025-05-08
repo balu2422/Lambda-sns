@@ -1,5 +1,3 @@
-# modules/sns.tf
-
 resource "aws_sns_topic" "image_resizing_topic" {
   name = "image-resizing-topic"
 }
@@ -8,7 +6,7 @@ resource "aws_sns_topic" "image_resizing_topic" {
 resource "aws_sns_topic_subscription" "email_sub" {
   topic_arn = aws_sns_topic.image_resizing_topic.arn
   protocol  = "email"
-  endpoint  = var.notification_email  # e.g., "youremail@gmail.com"
+  endpoint  = "tippuluri1998@gmail.com"  # Your email directly added here
 }
 
 resource "aws_s3_bucket_notification" "source_bucket_notification" {
