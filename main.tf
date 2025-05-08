@@ -14,10 +14,9 @@ module "sns" {
   email_endpoint = "tippuluri1998@gmail.com"  # Hardcoded email subscription
 }
 
-# IAM Module: Lambda Execution Role
+# IAM Module: Lambda Execution Role (No lambda_name argument passed)
 module "iam" {
-  source      = "./modules/iam"
-  lambda_name = "image-processor-lambda"  # Hardcoded Lambda function name
+  source = "./modules/iam"
 }
 
 # Lambda Module: Image Resizing Lambda Function
