@@ -6,17 +6,21 @@ provider "aws" {
 
 # Including all modules
 module "s3" {
-  source = "./modules/s3.tf"
+  source = "./modules/s3"
+  ...
 }
 
 module "iam" {
-  source = "./modules/iam.tf"
-}
-
-module "lambda" {
-  source = "./modules/lambda.tf"
+  source = "./modules/iam"
+  ...
 }
 
 module "sns" {
-  source = "./modules/sns.tf"
+  source = "./modules/sns"
+  ...
+}
+
+module "lambda" {
+  source = "./modules/lambda"
+  ...
 }
