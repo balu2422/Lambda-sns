@@ -10,8 +10,6 @@ module "s3" {
 # SNS Module: Topic and Subscription
 module "sns" {
   source         = "./modules/sns"
-  topic_name     = "image-processing-topic"  # Hardcoded topic name
-  email_endpoint = "tippuluri1998@gmail.com"  # Hardcoded email subscription
 }
 
 # IAM Module: Lambda Execution Role (No lambda_name argument passed)
