@@ -20,7 +20,4 @@ module "iam" {
 # Lambda Module: Image Resizing Lambda Function
 module "lambda" {
   source           = "./modules/lambda"
-  lambda_name      = "image-processor-lambda"  # Hardcoded Lambda function name
-  sns_topic_arn    = module.sns.sns_topic_arn  # SNS topic ARN from sns module
-  lambda_role_arn  = module.iam.lambda_exec_role_arn  # IAM role ARN from iam module
 }
